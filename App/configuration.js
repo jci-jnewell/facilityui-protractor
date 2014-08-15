@@ -22,8 +22,11 @@ exports.config = {
     // -----------------------------------------------------------------
 
     onPrepare: function () {
+    
+        // Force desktop resolution by default
+        browser.driver.manage().window().setSize(1200, 900);
+        
         browser.driver.get(env.baseUrl + 'Account/Login');
-
         browser.driver.findElement(by.id('username_inputClone0')).sendKeys('metasyssysagent');
         browser.driver.findElement(by.id('password_input')).sendKeys('B5F4soft');
         browser.driver.findElement(by.id('login_button')).click();
