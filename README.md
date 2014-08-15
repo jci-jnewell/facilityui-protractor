@@ -3,9 +3,11 @@
 ## Setup Steps
 
 1. Install node.js
+   
    The most current version of node should be installed using the installer provided at http://nodejs.org/. If already installed, a minimum version of v0.10.29 is suggested. 
 
 2. Run setup.bat to install protractor and webdriver-manager
+   
    The batch file assists in installing protractor globally and updating the webdriver-manager that is created with the protractor installation. These steps can be run manually using:
    ```
    > npm install -g protractor
