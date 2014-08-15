@@ -8,7 +8,10 @@ module.exports = {
   // Capabilities to be passed to the webdriver instance.
   capabilities: {
     'browserName': process.env.TEST_BROWSER_NAME || 'chrome',
-    'version': process.env.TEST_BROWSER_VERSION  || 'ANY'
+    'version': process.env.TEST_BROWSER_VERSION  || 'ANY',
+    'chromeOptions': {
+        args: ['--test-type']
+    }
   },
 
   // A base URL for your application under test.
