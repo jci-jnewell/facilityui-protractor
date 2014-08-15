@@ -1,12 +1,13 @@
 # FacilityUI testing using protactor
+This project consists of a basic proof of concept of an automated testing strategy for the FactilityUI project. 
 
 ## Setup Steps
 
-1. Install node.js
+1. Install _node.js_
    
    The most current version of node should be installed using the installer provided at http://nodejs.org/. If already installed, a minimum version of v0.10.29 is suggested. 
 
-2. Run setup.bat to install protractor and webdriver-manager
+2. Run setup.bat to install _protractor_ and _webdriver-manager_
    
    The batch file assists in installing protractor globally and updating the webdriver-manager that is created with the protractor installation. These steps can be run manually using:
    ```
@@ -16,12 +17,12 @@
 
    > Note that the proxy being used is specific to an internal network environment.
    
-3. To start an instance of selenium server, open a new cmd shell and run: 
+3. Start an instance of selenium server. Open a new _cmd_ window and run: 
    ```
-   > webdriver-manager update
+   > webdriver-manager start
    ```
 
-4. Run run.bat to execute all tests for Login or App. To run tests against either individually use:
+4. Run run.bat to execute all tests for the Login and App test suites. To run tests against either individually use:
    ```
    > protractor Login/configuration.js
    > protractor App/configuration.js
