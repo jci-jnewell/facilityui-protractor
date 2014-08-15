@@ -1,7 +1,7 @@
-# FacilityUI testing using protactor
+## FacilityUI testing using protactor
 This project consists of a basic proof of concept of an automated testing strategy for the FactilityUI project. 
 
-## Setup Steps
+#### Setup Steps
 
 1. Install _node.js_
    
@@ -28,16 +28,16 @@ This project consists of a basic proof of concept of an automated testing strate
    > protractor App/configuration.js
    ```
    
-## Test Suite: Login
-The Login test suite demonstrates a set of tests that use the raw selenium webdriver api. This is used because protractor is specifically tailored to Angular development and requires angular to be defined on the page. Since the Login page does not include any angular apps, the raw selenium spi must be used to test it.
+#### Test Suite: Login
+The Login test suite demonstrates a set of tests that use the raw selenium webdriver api. This is used because protractor is specifically tailored to AngularJS development and requires _angular_ to be defined on the page. Since the Login page does not include any angular apps, the raw selenium api must be used to test it.
 
-## Test Suite: App
+#### Test Suite: App
 The login test suite demonstrates a set of tests that validate overall application functionality. The configuration for the suite includes an `onPrepare` function to manage user login as part of the test session. By default, all tests will login and navigate to #/ on the application.
 
-## Environment Configuration
+#### Environment Configuration
 By default, the tests will be run against http://localhost/MetasysFacility.Application. You can optionally set the environment variables __TEST_HTTP_HOST__ and __TEST_HTTP_ROOT__ to modify the base URL for the test. These are used in the format `http://{TEST_HTTP_HOST}/{TEST_HTTP_ROOT}`.
 
-To hit a different server with a production installation at http://10.x.x.x/ui you could use:
+To hit a different server with a production installation at http://10.x.x.x/ui use:
    ```
    > set TEST_HTTP_HOST=10.x.x.x
    > set TEST_HTTP_ROOT=ui
